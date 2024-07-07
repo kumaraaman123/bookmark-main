@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- favicon -->
+    <link
+      rel="shortcut icon"
+      href="./assets/images/favicon.png"
+      type="image/x-icon"
+    />
+    <title>Bookmark System</title>
+
+    <!-- FontAwesome CDN  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- custom css -->
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
+  <body>
+    <main>
+      <div class="title">
+        <h3>Bookmarker</h3>
+      </div>
+      <form id="submit">
+        <div class="form-title">Bookmark your favorite website</div>
+        <div class="input">
+          <label for="inputName" class="name">Site Name</label>
+          <input
+            type="text"
+            id="inputName"
+            class="inputName"
+            placeholder="Bookmark Name"
+            onclick="nameFunction()"
+          />
+          <div class="msg" id="msg1">
+            <p class="msg-para">This Name is Not Valid</p>
+            <p class="msg-para">Example: Google</p>
+          </div>
+        </div>
+        <div class="input">
+          <label for="inputURL" class="website">Site URL</label>
+          <input
+            type="text"
+            id="inputURL"
+            class="inputURL"
+            placeholder="Website URL "
+            onclick="urlFunction()"
+          />
+          <div class="msg" id="msg2">
+            <p class="msg-para">This URL Is Not Valid</p>
+            <p class="msg-para">Example: http://www.google.com</p>
+          </div>
+        </div>
+        <input type="submit" value="Submit" class="submit-btn" />
+      </form>
+      <input
+        type="text"
+        class="searchInput"
+        placeholder="Search By Bookmark Name"
+      />
+      <div class="output">
+        <ul class="output-header">
+          <li>
+            <div class="">Index</div>
+            <div class="">Name</div>
+            <div class="">Website</div>
+            <div class="">Actions</div>
+          </li>
+        </ul>
+        <ul class="output-data">
+          <li></li>
+        </ul>
+      </div>
+    </main>
+    <!-- custom js -->
+    <script src="./scripts/script.js"></script>
+  </body>
+</html>
